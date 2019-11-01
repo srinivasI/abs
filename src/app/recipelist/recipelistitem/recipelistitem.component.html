@@ -4,7 +4,7 @@
         <h3>{{reciperecord.name}}</h3>
         <h5>{{reciperecord.desc}}</h5>
         <h4>Amount:{{reciperecord.amount | currency:'INR'}}</h4>
-        <h4>Qty:{{reciperecord.qty}}</h4>
+        <h4>Qty:{{reciperecord.qty}} -- Offer:{{reciperecord.offer | percent}}</h4>
     </div>
     <div class="col-md-4">
         <img src="{{reciperecord.imgpath}}" width="100" height="100" alt="noimage">

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Recipedata } from '../recipedata';
 
 @Component({
   selector: 'app-recipedetail',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipedetail.component.scss']
 })
 export class RecipedetailComponent implements OnInit {
-
+  @Input() selval:Recipedata;
   constructor() { }
 
   ngOnInit() {
