@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipedata } from '../recipedata';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-addtocart',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addtocart.component.scss']
 })
 export class AddtocartComponent implements OnInit {
-
-  constructor() { }
+  alldata:Recipedata[];
+  constructor(private cart:CartService) { }
 
   ngOnInit() {
+    this.alldata = this.cart.getRecipedata();
   }
 
 }

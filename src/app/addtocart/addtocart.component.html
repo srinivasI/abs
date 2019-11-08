@@ -1,1 +1,4 @@
-<p>addtocart works!</p>
+
+<div *ngFor="let recip of alldata">
+    <h3 class="list-group-item">{{recip.name}} ({{recip.qty}})--{{recip.amount| currency:'INR'}}</h3>
+</div>

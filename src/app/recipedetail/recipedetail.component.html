@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <h3><span *ngIf="selval.name">Name:</span>{{selval?.name}}</h3>
+        <h3><span *ngIf="selval?.name">Name:</span>{{selval?.name}}</h3>
     </div>
 </div>
 <div class="row">
@@ -15,7 +15,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <h4><span *ngIf="selval.amount">Price:</span>{{selval?.amount | currency :'INR'}}</h4>
+        <h4><span *ngIf="selval?.amount">Price:</span>{{selval?.amount | currency :'INR'}}</h4>
     </div>
 </div>
 <div class="row">
@@ -30,7 +30,7 @@
     </div>
     <div class="row">
             <div class="col-md-12">
-               <div *ngIf="selval.items"> Offers:</div>
+               <div *ngIf="selval?.items"> Offers:</div>
                <div *ngFor="let item of selval?.items">
                    <div class="list-group-item">{{item.itemname}} ({{ item.quantity}} )=== {{item.price | currency:'INR'}}</div>
 
@@ -39,7 +39,7 @@
         </div>
 <div class="row">
     <div class="col-md-12">
-        <button class="btn btn-success">Add to Cart</button>
+        <button class="btn btn-success" (click)="addData()">Add to Cart</button>
         <button class="btn btn-warning">Edit</button>
         <button class="btn btn-danger">Delete</button>
     </div>
