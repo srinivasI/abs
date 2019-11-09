@@ -2,3 +2,14 @@
 <div *ngFor="let recip of alldata">
     <h3 class="list-group-item">{{recip.name}} ({{recip.qty}})--{{recip.amount| currency:'INR'}}</h3>
 </div>
+ <ul *ngFor="let item1 of alldata.items">
+    <li class="list-group-item">{{item1.itemname}} ({{item1.quantity}})--{{item1.price| currency:'INR'}}</li>
+ </ul> 
+<br>
+<app-cartform [item]="selecteditem" (cleared)="onclear()"></app-cartform>
+<ul *ngFor="let item of freeitems">
+    <li class="list-group-item" (click)="senddata(item)">{{item.itemname}} ({{item.quantity}})--{{item.price| currency:'INR'}}</li>
+    </ul>
+
+    <br>
+    <button (click)="pay()" class="btn btn-primary">Procceed to Pay</button>

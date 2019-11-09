@@ -15,7 +15,8 @@ export class RecipedetailComponent implements OnInit {
   }
 
   addData(){
-this.cart.addRecipedata(this.selval)
+this.cart.addRecipedata(this.selval);
+this.cart.addFreeItems(this.selval.items);
   }
 
 }
