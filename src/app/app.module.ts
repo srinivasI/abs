@@ -15,6 +15,7 @@ import { CartformComponent } from './addtocart/cartform/cartform.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MainComponent } from './main.component';
     CartformComponent,
     LoginComponent,
     RegisterComponent,
-    MainComponent
+    MainComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

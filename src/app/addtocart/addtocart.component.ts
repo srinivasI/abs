@@ -22,7 +22,7 @@ this.selecteditem = item;
   }
   pay(){
     alert("welcome to ABs");
-// this.router.navigate
+    this.router.navigate(['login'])
   }
   ngOnInit() {
     this.alldata = this.cart.getRecipedata();
